@@ -16,28 +16,6 @@ using namespace arma;
 int imageWidth; //ширина изображения
 int imageHeight;  //высота  изображения
 
-int n = 1; //размер округи
-int v = 9; //длина вектора
-
-mat bubbleSort(mat x, int size)
-{
-    mat e = x;
-    int j;
-    for (int i = 0; i < size; i++)
-    {
-        for (j = 0; j < size - 1; j++)
-        {
-            if (e(0, j) > e(0, j + 1))
-            {
-                int temp = e(0, j + 1);
-                e(0, j + 1) = e(0, j);
-                e(0, j) = temp;
-            }
-        }
-    }
-    return e;
-}
-
 void start(const char * file1, const char * file2, const char *outputFile)
 {
     cout << "Start..." << endl;
@@ -66,8 +44,8 @@ void start(const char * file1, const char * file2, const char *outputFile)
 
 int main()
 {
-    start("images/4.jpg", "images/5.jpg", "result_images/out_image45.jpg");
-    start("images/1.jpg", "images/3.jpg", "result_images/out_image13.jpg");
+    start("images/1.jpg", "images/2.jpg", "result_images/out_image12.jpg");
 
+    start("images/6.jpg", "images/7.jpg", "result_images/out_image67.jpg");
     return 0;
 }
